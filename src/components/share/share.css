@@ -1,0 +1,79 @@
+.share {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+  /* background-color: gray; */
+  /* height: 20vh; */
+  box-shadow: 0px 0px 5px 0px rgba(76, 76, 76, 0.55);
+}
+.shareWrapper {
+  padding: 0.5rem 0.6rem;
+}
+.shareTop {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.shareInput {
+  height: 2.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: rgb(235, 235, 235);
+  margin-left: 0.5rem;
+}
+/* .shareInput:focus {
+  outline: none !important;
+} */
+.shareHr {
+  border: 0.5px solid rgb(228, 228, 228);
+  margin: 0.5rem 0;
+}
+.shareBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shareOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.shareOption {
+  display: flex;
+  align-items: center;
+  width: 32%;
+  /* background-color: lightgray; */
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.shareOption:hover {
+  background-color: rgb(235, 235, 235);
+}
+.shareType {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.shareButton {
+  padding: 0.4rem 0.5rem;
+  width: 10%;
+  border: none;
+  background-color: rgb(0, 187, 255);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.2s all ease;
+}
+.shareButton:hover {
+  opacity: 1;
+}

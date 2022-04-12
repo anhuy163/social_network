@@ -1,0 +1,24 @@
+.register {
+  width: 100%;
+}
+.registerWrapper {
+  /* width: 30%; */
+}
+
+.registerNameInput {
+  display: flex;
+  align-items: center;
+}
+.registerInput {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.registerInput.first {
+  margin-right: 1rem;
+}
+.registerMoreInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

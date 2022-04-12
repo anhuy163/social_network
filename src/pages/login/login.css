@@ -1,0 +1,53 @@
+.login {
+}
+.loginLogo {
+  font-weight: 700;
+  font-size: 4rem;
+  color: rgb(14, 109, 219);
+}
+.loginTitle {
+  /* font-weight: 400; */
+  font-size: 2rem;
+  font-style: italic;
+}
+.loginWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem 20rem;
+}
+.loginRight {
+  width: 40%;
+}
+.loginBoard {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 0px rgba(76, 76, 76, 0.55);
+}
+.loginBoardInput {
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.loginBoardSigninBtn {
+  width: 100%;
+  background-color: rgb(14, 109, 219);
+  color: white;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+.loginBoardSignupBtn {
+  margin-left: 25%;
+  border-radius: 0.5rem;
+  width: 50%;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  background-color: rgb(7, 209, 7);
+}

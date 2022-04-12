@@ -1,0 +1,61 @@
+.rightbar {
+  flex: 3;
+  height: calc(100vh - 3.5rem);
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  /* border-left: 1px solid gray; */
+}
+.rightbar:hover {
+  overflow-y: overlay;
+}
+.rightbarWrapper {
+  padding: 1rem 1rem;
+}
+.rightbarTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.rightbarBdImg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+.rightbarCenter {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 0px rgba(76, 76, 76, 0.55);
+  padding: 0.5rem 0;
+}
+.rightbarCenterImg {
+  width: 100%;
+}
+.rightbarCenterAd {
+  width: 90%;
+  margin: auto;
+}
+.rightbarBottom {
+  padding: 1rem 0;
+}
+.rightbarBottomTop {
+  display: flex;
+  align-items: center;
+}
+.onlineIcon {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.rightbarProfile {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 0px rgba(76, 76, 76, 0.55);
+  width: 95%;
+}
+.rightbarProfileTitle {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.rightbarProfileInfoItem {
+  display: flex;
+  align-items: center;
+}

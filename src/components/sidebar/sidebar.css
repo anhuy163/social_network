@@ -1,0 +1,71 @@
+.sidebar {
+  padding-top: 1rem;
+  flex: 3;
+  height: calc(100vh - 3.5rem);
+  overflow: hidden;
+  z-index: 0;
+  position: sticky;
+  top: 0;
+  /* background-color: aqua; */
+}
+.sidebar:hover {
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+.sidebarWrapper {
+  /* padding: 1.5rem 1rem; */
+  /* background-color: aqua; */
+  /* padding-left: 1.5rem; */
+}
+.sidebarList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebarListItem,
+.sidebarFriendListTitle {
+  padding: none;
+  align-items: center;
+  display: flex;
+  /* margin-bottom: 0.5rem !important; */
+}
+.sidebarListSubItemText {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.sidebarListItemText {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.sidebarListItemIcon {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+.sidebarHr {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  border-width: 0;
+  height: 0.1rem;
+  /* color: blue; */
+  background-color: rgb(0, 140, 255);
+}
+.sideBarFriendListSection {
+  padding-left: 1.5rem;
+}
+.friendList {
+  padding-left: 2rem;
+  /* height: 10vh; */
+}
+.sidebarFriendListTitle {
+  padding-top: 0.5rem;
+}
+#scrollableDiv {
+  height: 30vh;
+  overflow: hidden;
+}
+#scrollableDiv:hover {
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
