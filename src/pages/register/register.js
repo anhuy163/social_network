@@ -23,14 +23,14 @@ const modalContent = (
         className='registerInput info'
         size='large'
         placeholder='Username'></Input>
-      <Input
+      <Input.Password
         className='registerInput info'
         size='large'
-        placeholder='Password'></Input>
-      <Input
+        placeholder='Password'></Input.Password>
+      <Input.Password
         className='registerInput info'
         size='large'
-        placeholder='Confirm password'></Input>
+        placeholder='Confirm password'></Input.Password>
     </div>
     <div className='registerMoreInfo'>
       <div className='registerMore birthday'>

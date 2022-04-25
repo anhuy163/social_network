@@ -14,7 +14,7 @@ import { exampleData } from "../../testData";
 import Column from "antd/lib/table/Column";
 
 const PB = process.env.REACT_APP_PUBLIC_FOLDER;
-console.log(PB);
+// console.log(PB);
 
 const adLink =
   "https://itviec.com/nha-tuyen-dung/ntq-solution?utm_source=google&utm_medium=dis_cpc&utm_campaign=hn_performancemax&gclid=CjwKCAjwrqqSBhBbEiwAlQeqGlu-VYTMFHh9a_JZib4zHjCOOX5-HkHh50tLdywGzEzlCsSrZEytpBoCfO8QAvD_BwE";
@@ -37,7 +37,7 @@ const onlineFriendsList = (
   />
 );
 
-const RightBar = (props) => {
+const RightBar = ({ type, user }) => {
   const HomeRightBar = () => {
     return (
       <>
@@ -72,19 +72,19 @@ const RightBar = (props) => {
           <div className='rightbarProfileInfoItems'>
             <div className='rightbarProfileInfoItem'>
               <Work />
-              <span>Working at ...</span>
+              <span>Working at: {user.workAt}</span>
             </div>
             <div className='rightbarProfileInfoItem'>
               <FmdGood />
-              <span>From ...</span>
+              <span>From: {user.city}</span>
             </div>
             <div className='rightbarProfileInfoItem'>
               <Email />
-              <span>blahblah@gmail.com</span>
+              <span> {user.email}</span>
             </div>
             <div className='rightbarProfileInfoItem'>
               <Instagram />
-              <span>leomessi</span>
+              <span> {user.instagram}</span>
             </div>
           </div>
           <div className='rightbarProfileFriends'>
@@ -111,7 +111,7 @@ const RightBar = (props) => {
   return (
     <div className='rightbar'>
       <div className='rightbarWrapper'>
-        {props.type === "profile" ? <ProfileRightBar /> : <HomeRightBar />}
+        {user ? <ProfileRightBar /> : <HomeRightBar />}
       </div>
     </div>
   );

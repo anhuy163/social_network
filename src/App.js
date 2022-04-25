@@ -14,6 +14,14 @@ function App() {
         <Route exact path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/profile/:username' element={<Profile />}></Route>
+        <Route
+          path='*'
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
       </Routes>
     </Router>
   );

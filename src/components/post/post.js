@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./post.css";
 import { Avatar } from "antd";
 import {} from "@ant-design/icons";
@@ -9,14 +9,29 @@ import {
   FavoriteBorderOutlined,
   FavoriteOutlined,
 } from "@mui/icons-material";
+import axios from "axios";
+import { format } from "timeago.js";
+import { Link } from "react-router-dom";
 
-import { Users } from "../../testData";
-
-const Post = (props) => {
+const Post = ({ post }) => {
   const PB = process.env.REACT_APP_PUBLIC_FOLDER;
+
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const res = await axios.get(
+        `https://624520460e8dd89b5438d03c.mockapi.io/users/${post.userId}`
+      );
+      // console.log(res.data);
+      setUser(res.data);
+    };
+    fetchUser();
+  }, [post.userId]);
+
   const [like, setLike] = useState(false);
   const [favorite, setFavorite] = useState(false);
-  const [likeNumber, setLikeNumber] = useState(props.post.like);
+  const [likeNumber, setLikeNumber] = useState(post.like);
 
   const likeFn = () => {
     if (like) {
@@ -59,16 +74,18 @@ const Post = (props) => {
       <div className='postWrapper'>
         <div className='postTop'>
           <div className='postTopLeft'>
-            <Avatar
-              style={{ width: "2.5rem", height: "2.5rem" }}
-              src={
-                Users.filter((u) => u.id === props.post.userId)[0].pfp
-              }></Avatar>
+            <Link to={`/profile/${user.name}`}>
+              <Avatar
+                style={{ width: "2.5rem", height: "2.5rem" }}
+                src={user.pfp}></Avatar>
+            </Link>
+
             <div>
-              <div className='postUsername'>
-                {Users.filter((u) => u.id === props.post.userId)[0].name}
-              </div>
-              <div className='postDate'>{props.post.date}</div>
+              <Link to={`/profile/${user.name}`} style={{ color: "black" }}>
+                <div className='postUsername'>{user.name}</div>
+              </Link>
+
+              <div className='postDate'>{format(post.createdAt)}</div>
             </div>
           </div>
           <div className='postTopRight'>
@@ -76,9 +93,9 @@ const Post = (props) => {
           </div>
         </div>
         <div className='postCenter'>
-          <div className='postCentertitle'>{props.post.desc}</div>
+          <div className='postCentertitle'>{post.desc}</div>
           <div className='postCentercontent'>
-            <img className='postCentercontentImg' src={props.post.photo} />
+            <img className='postCentercontentImg' src={post.photo} />
           </div>
         </div>
         <div className='postBottom'>
@@ -97,7 +114,7 @@ const Post = (props) => {
               {likeNumber} people like it
             </span>
           </div>
-          <div className='postBottomright'>{props.post.comments} comments</div>
+          <div className='postBottomright'>{post.comments} comments</div>
         </div>
       </div>
     </div>
